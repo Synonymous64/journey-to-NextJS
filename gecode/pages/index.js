@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link';
 //! Next JS inbuilt script component 
 import Script from 'next/script'
 
@@ -15,10 +16,10 @@ export default function Home() {
       </Head>
       <nav className={styles.mainNav}>
         <ul>
-          <li>Home</li>
-          <li>about</li>
-          <li>Blog</li>
-          <li>Contact</li>
+          <Link href="/" legacyBehavior><a><li>Home</li></a></Link>
+          <Link href="/about" legacyBehavior><a><li>about</li></a></Link>
+          <Link href="/blog" legacyBehavior><a><li>Blog</li></a></Link>
+          <Link href="/contact" legacyBehavior><a><li>Contact</li></a></Link>
         </ul>
       </nav>
       {/* To load a third-party script in a single route, import next/script and include the script directly in your page component: */}
