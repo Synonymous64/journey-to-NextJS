@@ -1,11 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+// import styles1 from '../styles/Home1.module.css'
+// import styles2 from '../styles/Home2.module.css'
 import Link from 'next/link';
 //! Next JS inbuilt script component 
-import Script from 'next/script'
+// import Script from 'next/script'
 
 export default function Home() {
+  console.log(styles);
   return (
     <div className={styles.container}>
       <Head>
@@ -35,7 +38,8 @@ export default function Home() {
           there time management by providing optimal solutions for plethoric bugs
         </p>
 
-        <div className="blogs">
+        {/* <div className={`${styles2.con} ${styles1.con} ` }> */}
+        <div>
           <div className="blogItem">
             <h2>Popular Blogs</h2>
             <h3>How to learn javascript in 2022</h3>
