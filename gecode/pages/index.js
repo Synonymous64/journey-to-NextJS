@@ -1,9 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Dummy from '../components/Dummy';
-// import styles1 from '../styles/Home1.module.css'
-// import styles2 from '../styles/Home2.module.css'
 import Link from 'next/link';
 //! Next JS inbuilt script component 
 // import Script from 'next/script'
@@ -12,11 +9,13 @@ export default function Home() {
   // console.log(styles);
   return (
     <div className={styles.container}>
-    <Dummy/>
       <style jsx>
         {`
-        .mySpan{
-          color:red;
+        h2{
+          font-size:32px;
+        }
+        h3{
+          font-size:28px;
         }
     `}
       </style>
@@ -29,7 +28,7 @@ export default function Home() {
       <nav className={styles.mainNav}>
         <ul>
           <Link href="/" legacyBehavior><a><li>Home</li></a></Link>
-          <Link href="/about" legacyBehavior><a><li>about</li></a></Link>
+          <Link href="/about" legacyBehavior><a><li>About</li></a></Link>
           <Link href="/blog" legacyBehavior><a><li>Blog</li></a></Link>
           <Link href="/contact" legacyBehavior><a><li>Contact</li></a></Link>
         </ul>
@@ -43,12 +42,15 @@ export default function Home() {
             GeCode
           </span>
         </h1>
-
-        <p className={styles.description}>
-          A Special blog dedicated to all the coders ensuring
-          there time management by providing optimal solutions for plethoric bugs
-        </p>
-
+        <div className={styles.imgWrapper}>
+          <Image src="/homeimg.webp" className={styles.myImg} alt="img1" width={400} height={200} />
+        </div>
+        <div className={styles.description}>
+          <p className={styles.fontStyle}>
+            A Special blog dedicated to all the coders ensuring
+            there prolificacy by providing optimal solutions to plethoric bugs 😊
+          </p>
+        </div>
         {/* <div className={`${styles2.con} ${styles1.con} ` }> */}
         <div>
           <div className="blogItem">
@@ -72,19 +74,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <footer className={styles.footer}></footer>
     </div>
   )
 }
