@@ -11,3 +11,6 @@
   cursor: pointer;
   text-decoration: underline;
 }
+.blogItemP{
+  max-width: 55vw;
+}
