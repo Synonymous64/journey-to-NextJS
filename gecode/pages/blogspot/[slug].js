@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import styles from '../../styles/BlogSpot.module.css'
 // * Step 1: Find the file corresponding to the file.
@@ -20,15 +20,26 @@ const slug = () => {
     // }
     // let p = fetchApi();
     // console.log(p);
+    const [blog, setBlog] = useState();
     const router = useRouter();
     const { slug } = router.query;
+    useEffect(()=>{
+        // console.log('use effect is running');
+        if(!router.isReady) return;
+        fetch(`http://localhost:3000/api/getBlog?slug=${slug}`).then((data)=>{
+            return data.json();
+        }).then((parsedData)=>{
+            // console.log(parsedData);
+            setBlog(parsedData)
+        })
+    }, [router.isReady])
     return (
         <div className={`${styles.container}`}>
             <main className={styles.main}>
-                <h1>Title of the page {slug}</h1>
+                <h1>{ blog && blog.title}</h1>
                 <hr />
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident fugiat labore nemo expedita ad iste distinctio deserunt fuga consequuntur sapiente! Eius autem molestiae mollitia modi excepturi quos quas error nesciunt?
+                    { blog && blog.content}
                 </p>
             </main>
         </div>

@@ -9,11 +9,11 @@ import { useState } from 'react'
 const Blog = () => {
     const [blogs, setBlogs] = useState([]); 
     useEffect(()=>{
-        console.log('use effect is running');
+        // console.log('use effect is running');
         fetch('http://localhost:3000/api/blogs').then((data)=>{
             return data.json();
         }).then((parsedData)=>{
-            console.log(parsedData);
+            // console.log(parsedData);
             setBlogs(parsedData)
         })
     }, [])

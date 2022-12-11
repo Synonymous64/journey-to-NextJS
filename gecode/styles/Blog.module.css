@@ -10,6 +10,9 @@
 .blogItem h3 {
   cursor: pointer;
   text-decoration: underline;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
 }
 .blogItemP{
   max-width: 55vw;

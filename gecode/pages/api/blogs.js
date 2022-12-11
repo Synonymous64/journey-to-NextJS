@@ -22,7 +22,7 @@ export default async function handler(req, res) {
   for(let item = 0; item < data.length; ++item){
     console.log(data[item]);
     myFile = await fs.promises.readFile('blogData/' + data[item], 'utf-8');
-    console.log(myFile);
+    // console.log(myFile);
     allBlogs.push(JSON.parse(myFile));
   }
   res.status(200).json(allBlogs)
