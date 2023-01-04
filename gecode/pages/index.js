@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 //! Next JS inbuilt script component 
 // import Script from 'next/script'
@@ -34,7 +33,8 @@ export default function Home() {
           </span>
         </h1>
         <div className={styles.imgWrapper}>
-          <Image src="/homeimg.webp" className={styles.myImg} alt="img1" width={400} height={200} />
+          {/* <Image src="/homeimg.webp" className={styles.myImg} alt="img1" width={400} height={200} /> */}
+          <img src="/homeimg.webp" alt="img1" srcset="" width={400} height={200} />
         </div>
         <div className={styles.description}>
           <p className={styles.fontStyle}>
