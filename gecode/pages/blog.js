@@ -29,7 +29,7 @@ const Blog = ({ allBlogs }) => {
                             <Link href={`/blogspot/${blogItem.slug}`}>
                                 <h3>{blogItem.title}</h3></Link>
                             <p className={styles.blogItemP}>
-                                {blogItem.content.substr(0, 140) + "..."}
+                                {blogItem.metadesc.substr(0, 140) + "..."}
                             </p>
                         </div>
                     )

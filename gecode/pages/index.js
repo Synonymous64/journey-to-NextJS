@@ -34,7 +34,7 @@ export default function Home() {
         </h1>
         <div className={styles.imgWrapper}>
           {/* <Image src="/homeimg.webp" className={styles.myImg} alt="img1" width={400} height={200} /> */}
-          <img src="/homeimg.webp" alt="img1" srcset="" width={400} height={200} />
+          <img src="/homeimg.webp" alt="img1" srcSet="" width={400} height={200} />
         </div>
         <div className={styles.description}>
           <p className={styles.fontStyle}>

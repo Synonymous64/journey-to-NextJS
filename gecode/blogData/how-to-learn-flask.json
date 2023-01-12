@@ -1,6 +1,7 @@
 {
   "title": "How to learn Flask",
   "content": "Flask is a micro  written in . It is classified as a  because it does not require particular tools or libraries. It has no  abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions. However, Flask supports extensions that can add application features as if they were implemented in Flask itself. Extensions exist for , form validation, upload handling, various open authentication technologies and several common framework related tools.",
+  "metadesc": "Flask is a micro written in . It is classified as a because it does not require particular tools or libraries. It has no abstraction laye is classified as a  because it does not require particular tools or libraries. It has no  abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions. However, Flask supports extensions that can add application features as if they were implemented in Flask itself. Extensions exist for , form validation, upload handling, various open authentication technologies and several common framework related too",
   "author": "Prajwal Urkude",
   "slug": "how-to-learn-flask"
 }

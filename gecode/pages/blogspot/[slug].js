@@ -5,6 +5,9 @@ import * as fs from 'fs';
 // * Step 1: Find the file corresponding to the file.
 // * Step 2: Populate them inside the page.
 const Slug = ({ myBlog }) => {
+    const createMarkup = (c) =>{
+        return {__html: c}
+    }
     // let api = "https://anapioficeandfire.com/api/characters/583";
     // const fetchContent = async (api) => {
     //     let p = await fetch(api);
@@ -39,9 +42,7 @@ const Slug = ({ myBlog }) => {
             <main className={styles.main}>
                 <h1>{blog && blog.title}</h1>
                 <hr />
-                <p>
-                    {blog && blog.content}
-                </p>
+                {blog && <div dangerouslySetInnerHTML={createMarkup(blog.content)}></div>}
             </main>
         </div>
     )
